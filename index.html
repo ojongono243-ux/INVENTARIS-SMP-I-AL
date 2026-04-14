@@ -20,14 +20,28 @@ html, body {
     height: 100%;
     background: #ffffff;
 
-    overflow-x: auto;   /* ✅ INI KUNCI (boleh scroll kanan) */
+    /* 🔥 INI PERBAIKAN UTAMA */
+    overflow-x: auto; /* aktifkan scroll kanan kiri */
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Wrapper biar iframe bisa scroll horizontal */
+.iframe-container {
+    width: 100%;
+    overflow-x: auto;
     overflow-y: hidden;
 }
 
-/* iframe tetap full tapi tidak maksa */
+/* iframe */
 iframe {
     width: 100%;
-    height: 100vh;
+    
+    /* 🔥 penting: jangan pakai 100% saja */
+    min-width: 1200px; /* sesuaikan dengan lebar dashboard kamu */
+    
+    height: 100dvh;
     border: none;
     display: block;
 }
@@ -36,11 +50,13 @@ iframe {
 
 <body>
 
-<iframe 
-src="https://script.google.com/macros/s/AKfycbxZues9rLYb1AD7EuT3_iGJYUKhZpANYAaB_I2zMZSwh8swn33IMRUTtXtGfhEC1s_P/exec"
-allow="clipboard-read; clipboard-write"
-title="UKS BANIN APP">
-</iframe>
+<div class="iframe-container">
+    <iframe 
+    src="https://script.google.com/macros/s/AKfycbypC7Ktog2Da90RHe77oFUVYEmbMMPX9j1AqDFo6Jtf1HbH_vl2Zyse26aTa3XWY3jA/exec"
+    allow="clipboard-read; clipboard-write"
+    title="UKS BANIN APP">
+    </iframe>
+</div>
 
 </body>
 </html>
