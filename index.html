@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>DATA INVENTARIS SMPI AL MUHAJIRIN</title>
 
@@ -17,33 +17,33 @@
 html, body {
     width: 100%;
     height: 100%;
-    background: #ffffff;
-    overflow: hidden;
+    overflow: auto; /* aktifkan scroll global */
+    background: #fff;
 }
 
-/* WRAPPER BIAR BISA SCROLL KANAN */
-.iframe-container {
-    width: 100vw;
+/* WRAPPER */
+.wrapper {
+    width: max-content; /* ikut lebar isi */
+    min-width: 100vw;
     height: 100vh;
-    overflow: auto; /* ini kunci penting */
 }
 
-/* IFRAME JANGAN DIKUNCI */
+/* IFRAME */
 iframe {
-    width: 1400px; /* paksa lebih lebar dari layar */
-    height: 100%;
+    width: 1800px; /* paksa lebih lebar (bisa ubah 1600–2000) */
+    height: 100vh;
     border: none;
+    display: block;
 }
 </style>
 </head>
 
 <body>
 
-<div class="iframe-container">
+<div class="wrapper">
     <iframe 
     src="https://script.google.com/macros/s/AKfycbxZues9rLYb1AD7EuT3_iGJYUKhZpANYAaB_I2zMZSwh8swn33IMRUTtXtGfhEC1s_P/exec"
-    allow="clipboard-read; clipboard-write"
-    title="DATA INVENTARIS SMPI AL MUHAJIRIN">
+    allow="clipboard-read; clipboard-write">
     </iframe>
 </div>
 
