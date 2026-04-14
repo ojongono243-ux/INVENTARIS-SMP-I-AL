@@ -17,21 +17,23 @@
 html, body {
     width: 100%;
     height: 100%;
-    overflow: auto; /* aktifkan scroll global */
+    overflow: hidden;
     background: #fff;
 }
 
-/* WRAPPER */
-.wrapper {
-    width: max-content; /* ikut lebar isi */
-    min-width: 100vw;
+/* WRAPPER SCROLL */
+.container {
+    width: 100%;
     height: 100vh;
+    overflow-x: auto;  /* scroll kanan */
+    overflow-y: hidden;
 }
 
-/* IFRAME */
+/* IFRAME NORMAL (TIDAK DIPAKSA BESAR) */
 iframe {
-    width: 1800px; /* paksa lebih lebar (bisa ubah 1600–2000) */
-    height: 100vh;
+    min-width: 1200px; /* cukup lebar biar tombol kanan tidak hilang */
+    width: 100%;
+    height: 100%;
     border: none;
     display: block;
 }
@@ -40,7 +42,7 @@ iframe {
 
 <body>
 
-<div class="wrapper">
+<div class="container">
     <iframe 
     src="https://script.google.com/macros/s/AKfycbxZues9rLYb1AD7EuT3_iGJYUKhZpANYAaB_I2zMZSwh8swn33IMRUTtXtGfhEC1s_P/exec"
     allow="clipboard-read; clipboard-write">
