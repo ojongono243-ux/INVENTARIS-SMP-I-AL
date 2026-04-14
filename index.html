@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" 
+content="width=device-width, initial-scale=1, viewport-fit=cover">
 
 <title>DATA INVENTARIS SMPI AL MUHAJIRIN</title>
 
@@ -17,23 +18,16 @@
 html, body {
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    background: #fff;
-}
+    background: #ffffff;
 
-/* WRAPPER SCROLL */
-.container {
-    width: 100%;
-    height: 100vh;
-    overflow-x: auto;  /* scroll kanan */
+    overflow-x: auto;   /* ✅ INI KUNCI (boleh scroll kanan) */
     overflow-y: hidden;
 }
 
-/* IFRAME NORMAL (TIDAK DIPAKSA BESAR) */
+/* iframe tetap full tapi tidak maksa */
 iframe {
-    min-width: 1200px; /* cukup lebar biar tombol kanan tidak hilang */
     width: 100%;
-    height: 100%;
+    height: 100vh;
     border: none;
     display: block;
 }
@@ -42,12 +36,11 @@ iframe {
 
 <body>
 
-<div class="container">
-    <iframe 
-    src="https://script.google.com/macros/s/AKfycbxZues9rLYb1AD7EuT3_iGJYUKhZpANYAaB_I2zMZSwh8swn33IMRUTtXtGfhEC1s_P/exec"
-    allow="clipboard-read; clipboard-write">
-    </iframe>
-</div>
+<iframe 
+src="https://script.google.com/macros/s/AKfycbxZues9rLYb1AD7EuT3_iGJYUKhZpANYAaB_I2zMZSwh8swn33IMRUTtXtGfhEC1s_P/exec"
+allow="clipboard-read; clipboard-write"
+title="UKS BANIN APP">
+</iframe>
 
 </body>
 </html>
